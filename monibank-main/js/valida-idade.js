@@ -8,5 +8,5 @@ function validaIdade (data){
     const dataAtual = new  date()
     const dateMais18 = new data(data.getUTCfullyear()+ 18, data.getUTCmoth(), data.grtUTCdate())
 
-    return dataAtual >= dateMais18 
+    return dataAtual >= dateMais18     
 }
