@@ -1,5 +1,5 @@
-import ehUmCPF from "./valida-cpf"
-import ehMaiorDeIdade from "./valida-idade"
+import ehUmCPF from "./valida-cpf.js"
+import ehMaiorDeIdade from "./valida-idade.js"
 const camposDoFormulario = document.querySelectorAll("[required]")
 const formulario = document.queryselector("[data-formulario]")
 
@@ -20,8 +20,8 @@ formulario.addEventListener("submit", (e) => {
 
 
 camposDoFormulario.forEach((campo) => {
-    campo.addeventlistener("blur", () => verificacampo(campo))
-    campo.addEventListener("invalid", evento => evento.preventDefault() )
+    campo.addeventlistener("blur", () => verificacampo(campo));
+    campo.addEventListener("invalid", evento => evento.preventDefault() );
 } )
 
 const  tiposDeEro = [
@@ -37,7 +37,7 @@ const mensagens = {
     nome: {
         valueMissing: "o campo de nome pode estar vazio.",
         pattermMismatch: "por favor, prencha um nome válido",
-        tooShort:" por favot, prencha um nome válido."
+        tooShort:" por favor, prencha um nome válido."
 
     },
     email: {
@@ -48,7 +48,7 @@ const mensagens = {
     rg: {
         valueMissing: "o campo de RG pode estar vazio.",
         pattermMismatch: "por favor, prencha um RG válido",
-        tooShort:" por favot, prencha um nome válido."
+        tooShort:" por favot, prencha um nome válido!."
     }
 }
 
